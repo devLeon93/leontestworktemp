@@ -19,6 +19,10 @@ public class Main {
                .filter(st->st.getFirstname().equals("Vadim")).collect(Collectors.toList());
         System.out.println(studentNew);
 
+        List<Boolean> booleans = studentList.stream().map(student -> student.getAge() > 23).collect(Collectors.toList());
+        System.out.println(booleans);
+
+
 
 
     }
