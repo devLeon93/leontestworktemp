@@ -22,6 +22,11 @@ public class Main {
         List<Boolean> booleans = studentList.stream().map(student -> student.getAge() > 23).collect(Collectors.toList());
         System.out.println(booleans);
 
+        List<Boolean> booleans2 = studentList.stream().map(student -> student.getAge() > 45).collect(Collectors.toList());
+        System.out.println(booleans);
+
+
+
 
 
 
