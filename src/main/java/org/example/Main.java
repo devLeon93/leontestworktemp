@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +14,12 @@ public class Main {
         studentList.add(new Student("Nicolai","Luca","Oleg",28));
         studentList.add(new Student("Olga","Larionova","Anatol",45));
 
-        System.out.println(studentList.get(3));
+
+       List<Student> studentNew = studentList.stream()
+               .filter(st->st.getFirstname().equals("Vadim")).collect(Collectors.toList());
+        System.out.println(studentNew);
+
+
 
     }
 }
